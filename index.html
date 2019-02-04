@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    function sum (numberOne, numberTwo) {
+        numberOne = numberOne.split('');
+        numberTwo = numberTwo.split('');
+        let a, b;
+        if(numberTwo.length > numberOne.length) {
+            a = numberTwo;
+            b = numberOne;
+        } else {
+            a = numberOne;
+            b = numberTwo;
+        }
+        let remainder = 0;
+        let result = '';
+        for(let i = 0; i = a.length; i++) {
+            aLastNum = parseInt(a.pop());
+            bLastNum = 0;
+
+            if(b.length > 0) {
+                bLastNum = parseInt(b.pop());
+            }
+
+            let sum;
+            sum = aLastNum + bLastNum + remainder;
+
+            remainder = 0;
+
+            if(sum >= 10) {
+                remainder = 1;
+                sum = sum - 10;
+            }
+
+            result = sum + result;
+        }
+        return result;
+    }
+    sum('4677899996', '763464596045745');
+</script>
+</html>
