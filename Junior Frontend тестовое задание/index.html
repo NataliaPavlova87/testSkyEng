@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 1</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="magnific-popup.css">
+</head>
+<body>
+  <!--
+    Welcome to your first asset!
+
+    You could've noticed there is a link to Roboto font in the head.
+    You can use it in css by typing font-family: Roboto, sans-serif;
+    and you can customize it by using font-weight (400, 500 etc. - numbers in the link tag)
+
+    Good luck and have fun!
+  -->
+  <div class="container">
+        <section class="products">
+          <a class="product product_bg1 popup-modal" href="#modal-mobile">
+            <h2 class="product-heading">Mobile</h2>
+            <p class="product-text">
+              Get notifications about new releases in our mobile app.
+            </p>
+            <div class="price-month">
+              <div class="price">
+                <span class="price_span">$</span>
+                <p class="price_text">10</p>
+              </div>
+              <div class="month">
+                <p class="month_text">/month</p>
+              </div>
+            </div>
+          </a>
+          <a class="product product_bg2 popup-modal" href="#modal-desktop">
+              <h2 class="product-heading">Desktop</h2>
+              <p class="product-text">
+                Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.
+              </p>
+              <div class="price-month">
+                <div class="price">
+                  <span class="price_span">$</span>
+                  <p class="price_text">15</p>
+                </div>
+                <div class="month">
+                  <p class="month_text">/month</p>
+                </div>
+              </div>
+            </a>
+            <a class="product product_bg3 popup-modal" href="#modal-tv">
+              <h2 class="product-heading">TV</h2>
+              <p class="product-text">
+                Watch your favorite series at home on large screen with our TV application.
+              </p>
+              <div class="price-month">
+                <div class="price">
+                  <span class="price_span">$</span>
+                  <p class="price_text">20</p>
+                </div>
+                <div class="month">
+                  <p class="month_text">/month</p>
+                </div>
+              </div>
+            </a>
+      </section>
+    </div>
+
+<!-- --------------Модальное окно--------------- -->
+    <div id="modal-mobile" class="mfp-hide white-popup-block">
+      <p class="close-text"><a class="popup-modal-dismiss" href="#"></a></p>
+      <h2 class="modal-heading">Mobile</h2>
+      <p class="modal-text">Congratulations!!!</p>
+    </div>
+
+    <div id="modal-desktop" class="mfp-hide white-popup-block">
+        <p class="close-text"><a class="popup-modal-dismiss" href="#"></a></p>
+        <h2 class="modal-heading">Desktop</h2>
+        <p class="modal-text">Congratulations!!!</p>
+      </div>
+
+      <div id="modal-tv" class="mfp-hide white-popup-block">
+          <p class="close-text"><a class="popup-modal-dismiss" href="#"></a></p>
+          <h2 class="modal-heading">TV</h2>
+          <p class="modal-text">Congratulations!!!</p>
+      </div>
+
+
+<script src="jquery-3.3.1.js"></script>
+<script src="jquery.magnific-popup.min.js"></script>
+<script>
+
+$(function () {
+	$('.popup-modal').magnificPopup({
+		type: 'inline',
+    closeOnBgClick: true,
+		preloader: false,
+		focus: '#username',
+	});
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+});
+
+</script>
+</body>
+</html>
