@@ -1,0 +1,307 @@
+/* --------------- reset.css --------------- */
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,em,img,strong,sub,sup,b,u,i,dl,dt,
+dd,ol,ul,li,fieldset,form,label,table,tbody,tfoot,thead,tr,th,td,article,
+aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,
+section,summary,time,mark,audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* обнуляем отступы и убираем бордюры */
+    vertical-align: baseline;
+    /* приводим все к одной базовой линии */
+    background: transparent;
+    /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+    font-size: 100%;
+    /* размер шрифта всем одинаковый */
+}
+
+a {
+    /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    outline: none;
+}
+
+table {
+    /* устраняем отступы между ячейками таблицы */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+td img {
+    vertical-align: top;
+    /* возвращаем привычное вертикальное выравнивание */
+}
+
+input,
+select,
+button,
+textarea {
+    margin: 0;
+    /* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+    font-size: 100%;
+    /* делаем размер шрифтов везде одинаковым */
+    outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    /* убираем внутренние отступы для текстовых полей */
+}
+
+input[type="checkbox"] {
+    /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+    vertical-align: bottom;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+
+html {
+    min-height: 100%;
+    /* всегда показываем вертикальную полосу прокрутки  */
+}
+
+body {
+    font-family: ApercuPro;
+    color: #000;
+    text-align: left;
+    font-size: 1em;
+    /* используем безопасные шрифтовые CSS стеки */
+    min-height: 100%;
+}
+
+a,
+a:visited {
+    /* порядок правил для ссылок имеет значение */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus,
+a:active {
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/* --------------- /базовые настройки ---------*/
+
+
+/* ------------прижатие footer к низу экрана--------- */
+html,
+body {
+	height: 100%;
+}
+.container {
+	min-height: 100%;
+	display: flex;
+    flex-direction: column;
+    background-color: #85a5d4;
+}
+.content {
+	flex: 1;
+}
+/* ------------------------------------------------------ */
+
+.products {
+    background-color: #ffffff;
+    max-width: 903px;
+    min-height: 338px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.product {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    max-width: 300px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+    -webkit-transition: background-color 0.6s;
+    -moz-transition: background-color 0.6s;
+    -ms-transition: background-color 0.6s;
+    -o-transition: background-color 0.6s;
+}
+.product:hover {
+    background-color: #eaeaea   ;
+}
+.product_bg1 {
+    background: url('img/device.svg') no-repeat center 24px;
+    background-size: 25%;
+}
+.product_bg2 {
+    background: url('img/laptop.svg') no-repeat center 24px;
+    background-size: 25%;
+}
+.product_bg3 {
+    background: url('img/monitor.svg') no-repeat center 24px;
+    background-size: 25%;
+}
+.product-heading {
+    text-transform: uppercase;
+    color: #5572d6;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 116px;
+}
+.product-text {
+    color: #a7a8aa;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    padding: 0 28px;
+    line-height: 20px;
+    padding-top: 20px
+}
+.price-month {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+}
+.price {
+    display: flex;
+}
+.price_span {
+    color: #5572d6;
+    font-weight: 600;
+    font-family: Roboto, sans-serif;
+}
+.price_text {
+    font-weight: 600;
+    font-size: 33px;
+    font-family: Roboto, sans-serif;
+    color: #5572d6;
+}
+.month_text {
+    color: #5572d6;
+    font-family: Roboto, sans-serif;
+    padding-top: 13px;
+}
+
+
+
+/* ------------Стили для модального окна------------------ */
+
+.white-popup-block {
+    background-color: white;
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 170px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.popup-modal-dismiss {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('img/cross.svg') no-repeat center center;
+    background-size: contain;
+}
+.close-text {
+    display: flex;
+    justify-content: flex-end;
+}
+.modal-heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: #5572d6;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    padding-top: 30px;
+}
+.modal-text {
+    text-align: center;
+    color: #a7a8aa;
+    font-family: Roboto, sans-serif;
+    font-size: 28px;
+    line-height: 20px;
+    padding-top: 20px
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------- Адаптация -------------------*/
+
+@media only screen and (max-width:1140px) {
+    .products{width: 95%;}
+}
+
+@media only screen and (max-width:767px) {
+    .products{flex-wrap: wrap; justify-content: center;}
+}
+
+@media only screen and (max-width:479px) {
+
+}
